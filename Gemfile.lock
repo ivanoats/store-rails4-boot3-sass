@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
+  revision: ab2f7dd92491bd490e545c18d32e966567b84a3b
+  specs:
+    bootstrap-sass (3.0.0.0)
+      sass (~> 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -28,8 +35,6 @@ GEM
     arel (4.0.0)
     atomic (1.1.14)
     bcrypt-ruby (3.0.1)
-    bootstrap-sass (2.3.2.0)
-      sass (~> 3.2)
     bootstrap-will_paginate (0.0.9)
       will_paginate
     builder (3.1.4)
@@ -116,7 +121,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby (= 3.0.1)
-  bootstrap-sass (= 2.3.2.0)
+  bootstrap-sass!
   bootstrap-will_paginate (= 0.0.9)
   coffee-rails (= 4.0.0)
   faker (= 1.1.2)
