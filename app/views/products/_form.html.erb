@@ -1,25 +1,27 @@
-<%= form_for(@product) do |f| %>
-  <% if @product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
-      <ul>
-      <% @product.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= form_for @product, :html => { :class => 'from-horizontal' } do |f| %>
+    <fieldset>
+      <legend><%= controller.action_name.capitalize %> Product</legend>
+
+      <div class="control-group">
+        <%= f.label :name, :class => 'control-label' %>
+        <div class="controls">
+          <%= f.text_field :name, :class => 'text_field' %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :price, :class => 'control-label' %>
+        <div class="controls">
+          <%= f.text_field :price, :class => 'text_field' %>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <%= f.submit nil, :class => 'btn btn-primary' %>
+        <%= link_to 'Cancel', products_path, :class => 'btn' %>
+      </div>
+    </fieldset>
 <% end %>
+
